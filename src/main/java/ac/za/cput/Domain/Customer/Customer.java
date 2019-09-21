@@ -2,17 +2,15 @@ package ac.za.cput.Domain.Customer;
 
 public class Customer {
 
-    String custName, custPhone, custId, custSurname, custEmail, custAddress;
-    boolean mem;
+    String custName, custPhone, custId, custSurname;
+
 
     public Customer(Builder builder) {
         this.custId = builder.custId;
         this.custPhone = builder.custPhone;
         this.custName = builder.custName;
         this.custSurname = builder.custSurname;
-        this.custEmail = builder.custEmail;
-        this.custAddress = builder.custAddress;
-        this.mem = builder.mem;
+
     }
 
     public String getCustId() {
@@ -31,24 +29,9 @@ public class Customer {
         return custSurname;
     }
 
-    public String getCustEmail() {
-        return custEmail;
-    }
-
-    public String getCustAddress() {
-        return custAddress;
-    }
-
-    public boolean isMem() {
-        return mem;
-    }
-
     public static class Builder
     {
-        String custId;
-        String custPhone;
-        String custName, custSurname, custEmail, custAddress;
-        boolean mem;
+        String custName, custPhone, custId, custSurname;
 
         public Builder custId(String custId)
         {
@@ -74,23 +57,7 @@ public class Customer {
             return this;
         }
 
-        public Builder custEmail(String custEmail)
-        {
-            this.custEmail = custEmail;
-            return this;
-        }
 
-        public Builder custAddress(String custAddress)
-        {
-            this.custAddress = custAddress;
-            return this;
-        }
-
-        public Builder mem(boolean mem)
-        {
-            this.mem = mem;
-            return this;
-        }
 
         public Builder copy(Customer customer){
             this.custId = customer.custId;
@@ -114,9 +81,6 @@ public class Customer {
                 ", custPhone=" + custPhone +
                 ", custName='" + custName + '\'' +
                 ", custSurname='" + custSurname + '\'' +
-                ", custEmail='" + custEmail + '\'' +
-                ", custAddress='" + custAddress + '\'' +
-                ", mem=" + mem +
                 '}';
     }
 }
