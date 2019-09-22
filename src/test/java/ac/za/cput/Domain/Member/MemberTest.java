@@ -28,14 +28,19 @@ class MemberTest {
 
     @Test
     void getAge() {
+        assertNotNull(mem1);
+        assertNotEquals(mem1.getAge(), mem2.getAge());
+        assertEquals(mem1.getAge(), "23");
+        System.out.println("Member age is: " +mem1.getAge() + "\nMember age is: " +mem2.getAge());
 
     }
 
     @Test
     void getId() {
-    }
+        assertNotNull(mem1);
+        assertNotEquals(mem1.getId(), mem2.getId());
+        assertEquals(mem1.getId(), "1");
+        System.out.println("Member ID is: " +mem1.getId() + "\nMember ID is: " +mem2.getId());
 
-    @Test
-    void testToString() {
     }
 }

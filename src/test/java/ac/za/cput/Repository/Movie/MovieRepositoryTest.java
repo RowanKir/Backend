@@ -1,7 +1,8 @@
-package ac.za.cput.Repository;
+package ac.za.cput.Repository.Movie;
 
 import ac.za.cput.Domain.Movie.Movie;
 import ac.za.cput.Factory.Movie.MovieFactory;
+import ac.za.cput.Repository.MovieRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
