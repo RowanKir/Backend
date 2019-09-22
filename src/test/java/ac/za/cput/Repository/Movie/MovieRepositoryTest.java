@@ -14,8 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class MovieRepositoryTest {
 
     private MovieRepository movieRepository;
-    Movie movie1 = MovieFactory.buildMovie("End Game", "1", "Action", 2019, 50.00);
-    Movie movie2 = MovieFactory.buildMovie("Infinity war", "2", "Action", 2018, 40.00);
+    Movie movie1 = MovieFactory.buildMovie("End Game");
+    Movie movie2 = MovieFactory.buildMovie("Infinity war");
 
     @BeforeEach
     public  void setUp() throws Exception {
@@ -63,7 +63,7 @@ class MovieRepositoryTest {
     @Test
     void update() {
         this.movieRepository.create(movie1);
-        Movie newMovie = MovieFactory.buildMovie("End game", "1", "Action", 2019, 60.00);
+        Movie newMovie = MovieFactory.buildMovie("End game");
         System.out.println("Updated: " +this.movieRepository.read(movie1.getMovieTitle()).toString());
         this.movieRepository.update(newMovie);
         System.out.println("To: " +this.movieRepository.read(newMovie.getMovieTitle()).toString() + "\n");

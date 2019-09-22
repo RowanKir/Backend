@@ -2,14 +2,13 @@ package ac.za.cput.Domain.Movie;
 
 import ac.za.cput.Factory.Movie.MovieFactory;
 import org.junit.jupiter.api.Test;
-import java.util.function.BooleanSupplier;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MovieTest {
 
-    Movie movie1 = MovieFactory.buildMovie("End Game", "1", "Action", 2019, 50.00);
-    Movie movie2 = MovieFactory.buildMovie("Infinity war", "2", "Action", 2018, 40.00);
+    Movie movie1 = MovieFactory.buildMovie("End Game");
+    Movie movie2 = MovieFactory.buildMovie("Infinity war");
 
     @Test
     void getYearRelease() {

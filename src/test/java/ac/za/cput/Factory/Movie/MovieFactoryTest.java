@@ -9,7 +9,7 @@ class MovieFactoryTest {
 
     @Test
     void buildMovie() {
-        Movie movie1 = MovieFactory.buildMovie("End game", "1", "Action", 2019, 50.00);
+        Movie movie1 = MovieFactory.buildMovie("End game");
 
         assertNotNull(movie1);
         System.out.println(movie1.toString());

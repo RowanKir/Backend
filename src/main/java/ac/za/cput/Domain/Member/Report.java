@@ -2,15 +2,17 @@ package ac.za.cput.Domain.Member;
 
 public class Report {
 
-    int reportId;
+    String reportId;
     String reportDescription;
+    Object report;
 
-    public Report(Builder builder) {
-        this.reportId = builder.reportId;
-        this.reportDescription = builder.reportDescription;
+
+    public Report(String reportId, String reportDescription) {
+        this.reportId = reportId;
+        this.reportDescription = reportDescription;
     }
 
-    public int getReportId() {
+    public String getReportId() {
         return reportId;
     }
 
@@ -18,28 +20,23 @@ public class Report {
         return reportDescription;
     }
 
-    public static class Builder
-    {
-        int reportId;
-        String reportDescription;
-
-        public Builder reportId(int reportId)
-        {
-            this.reportId = reportId;
-            return this;
-        }
-        public Builder reportDescription(String reportDescription)
-        {
-            this.reportDescription = reportDescription;
-            return this;
-        }
-
-        public Report build()
-        {
-            return new Report(this);
-        }
-
+    public void setReportId(String reportId) {
+        this.reportId = reportId;
     }
+
+    public Object getReport() {
+        return report;
+    }
+
+    public void setReport(Object report) {
+        this.report = report;
+    }
+
+    public void setReportDescription(String reportDescription) {
+        this.reportDescription = reportDescription;
+    }
+
+
 
     @Override
     public String toString() {
