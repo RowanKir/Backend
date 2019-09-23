@@ -35,7 +35,6 @@ public class Security extends WebSecurityConfigurerAdapter {
                 .httpBasic()
                 .and()
                 .authorizeRequests()
-//                TODO change post and get to respective url mappings
                 .antMatchers(HttpMethod.POST, "/VideoStore/movie/**/create/**").hasRole(ADMIN_ROLE)
                 .antMatchers(HttpMethod.GET, "/VideoStore/**/getAll/**").hasRole(ADMIN_ROLE)
                 .and()
