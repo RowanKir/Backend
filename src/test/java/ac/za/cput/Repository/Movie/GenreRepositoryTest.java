@@ -78,7 +78,7 @@ class GenreRepositoryTest {
         System.out.println("Create genre 2: " +genre2.toString());
         this.genreRepository.delete(genre2.getGenreCode());
         System.out.println("Deleted employee2, all employees currently present in array: " +this.genreRepository.getAll());
-        assertEquals(null, this.genreRepository.read(genre1.getGenreCode()));
+        assertEquals(genre1, this.genreRepository.read(genre1.getGenreCode()));
     }
 
     @AfterEach

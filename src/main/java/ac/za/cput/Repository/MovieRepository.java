@@ -36,7 +36,7 @@ public class MovieRepository implements MovieRepositoryImpl {
 
     @Override
     public Movie create(Movie movie) {
-        this.movieRepDB.put(movie.getMovieId(), movie);
+        this.movieRepDB.put(movie.getMovieTitle(), movie);
         return movie;
     }
 
@@ -44,7 +44,7 @@ public class MovieRepository implements MovieRepositoryImpl {
     public Movie read(String s) {
         for(Movie movie: movieRepDB.values())
         {
-            if(movie.getMovieId().equals(s))
+            if(movie.getMovieTitle().equals(s))
             {
                 return movie;
             }
@@ -54,10 +54,10 @@ public class MovieRepository implements MovieRepositoryImpl {
 
     @Override
     public Movie update(Movie movie) {
-        Movie deleteMovie = read(movie.getMovieId());
+        Movie deleteMovie = read(movie.getMovieTitle());
         if(deleteMovie != null)
         {
-            this.movieRepDB.remove(deleteMovie.getMovieId());
+            this.movieRepDB.remove(deleteMovie.getMovieTitle());
             return create(movie);
         }
         return null;
