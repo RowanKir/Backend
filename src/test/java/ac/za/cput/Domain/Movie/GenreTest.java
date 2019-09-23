@@ -14,7 +14,7 @@ class GenreTest {
     void getGenreCode() {
         assertNotNull(genre1.genreCode);
         assertNotEquals(genre1.getGenreCode(), genre2.getGenreCode());
-        assertEquals(genre1.getGenreCode(), 1);
+        assertEquals(genre1.getGenreCode(), "1");
         System.out.println("Genre 1's code is: " +genre1.getGenreCode() + "\nMovie 2's year release is: " +genre2.getGenreCode() + "");
     }
 
