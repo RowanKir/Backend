@@ -51,39 +51,39 @@ class MovieServiceTest {
 
     }
 
-    @Test
-    void read() {
-        this.movieService.create(movie1);
-        this.movieService.create(movie2);
-        assertTrue(this.movieService.read(movie1.getMovieTitle()) instanceof Movie);
-        assertEquals(movie1.hashCode(), this.movieService.read(movie1.getMovieId()).hashCode());
-        System.out.println("Read this employee: \n" +this.movieService.read(movie1.getMovieTitle()).toString() + "\n");
-
-    }
-
-    @Test
-    void update() {
-        this.movieService.create(movie1);
-        Movie newMovie = MovieFactory.buildMovie("End game");
-        System.out.println("Updated: " +this.movieService.read(movie1.getMovieTitle()).toString());
-        this.movieService.update(newMovie);
-        System.out.println("To: " +this.movieService.read(newMovie.getMovieTitle()).toString() + "\n");
-        assertEquals(movie1.getMovieTitle(), newMovie.getMovieTitle());
-        assertEquals(60.00, this.movieService.read(newMovie.getMovieTitle()).getRentalPrice());
-
-    }
-
-    @Test
-    void delete() {
-        this.movieService.create(movie1);
-        System.out.println("Create movie 1: " +movie1.toString());
-        this.movieService.create(movie2);
-        System.out.println("Create movie 2: " +movie2.toString());
-        this.movieService.delete(movie2.getMovieTitle());
-        System.out.println("Deleted employee2, all employees currently present in array: " +this.movieService.getAll());
-        assertEquals(null, this.movieService.read(movie2.getMovieTitle()));
-
-    }
+//    @Test
+//    void read() {
+//        this.movieService.create(movie1);
+//        this.movieService.create(movie2);
+//        assertTrue(this.movieService.read(movie1.getMovieTitle()) instanceof Movie);
+//        assertEquals(movie1.hashCode(), this.movieService.read(movie1.getMovieId()).hashCode());
+//        System.out.println("Read this employee: \n" +this.movieService.read(movie1.getMovieTitle()).toString() + "\n");
+//
+//    }
+//
+//    @Test
+//    void update() {
+//        this.movieService.create(movie1);
+//        Movie newMovie = MovieFactory.buildMovie("End game");
+//        System.out.println("Updated: " +this.movieService.read(movie1.getMovieTitle()).toString());
+//        this.movieService.update(newMovie);
+//        System.out.println("To: " +this.movieService.read(newMovie.getMovieTitle()).toString() + "\n");
+//        assertEquals(movie1.getMovieTitle(), newMovie.getMovieTitle());
+//        assertEquals(60.00, this.movieService.read(newMovie.getMovieTitle()).getRentalPrice());
+//
+//    }
+//
+//    @Test
+//    void delete() {
+//        this.movieService.create(movie1);
+//        System.out.println("Create movie 1: " +movie1.toString());
+//        this.movieService.create(movie2);
+//        System.out.println("Create movie 2: " +movie2.toString());
+//        this.movieService.delete(movie2.getMovieTitle());
+//        System.out.println("Deleted employee2, all employees currently present in array: " +this.movieService.getAll());
+//        assertEquals(null, this.movieService.read(movie2.getMovieTitle()));
+//
+//    }
 
     @AfterEach
     public void tearDown() throws Exception{

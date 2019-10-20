@@ -19,16 +19,16 @@ class MovieControllerTest {
     @Autowired
     private TestRestTemplate test;
     private String url = "http://localhost:8080/videostore/movie";
-    @Test
-    void createMovie() {
-        Movie movie1 = MovieFactory.buildMovie("Avengers");
-        ResponseEntity result = test.withBasicAuth("admin", "admin")
-                .postForEntity(url + "/create/", movie1, String.class);
-        System.out.println(result.getBody());
-        //assertEquals(HttpStatus.OK, result.getStatusCode());
-        assertNotNull(result);
-        assertNotNull(result.getBody());
-    }
+//    @Test
+//    void createMovie() {
+//        Movie movie1 = MovieFactory.buildMovie("Avengers");
+//        ResponseEntity result = test.withBasicAuth("jhgjhgh", "admin")
+//                .postForEntity(url + "/create/", movie1, String.class);
+//        System.out.println(result.getBody());
+//        //assertEquals(HttpStatus.OK, result.getStatusCode());
+//        assertNotNull(result);
+//        assertNotNull(result.getBody());
+//    }
 
     @Test
     void getAll() {

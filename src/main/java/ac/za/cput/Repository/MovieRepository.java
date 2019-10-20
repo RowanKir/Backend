@@ -2,9 +2,11 @@ package ac.za.cput.Repository;
 
 import ac.za.cput.Domain.Movie.Movie;
 import ac.za.cput.Repository.Impl.MovieRepositoryImpl;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 
+//@Repository("MovieInMemory")
 public class MovieRepository implements MovieRepositoryImpl {
 
     private HashMap<String, Movie> movieRepDB;

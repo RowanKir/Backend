@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 
-@Service
+@Service("MovieService")
 public class MovieService implements MovieServiceImpl {
 
     private HashMap<String, Movie> movieSerDB;
